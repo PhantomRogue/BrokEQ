@@ -111,6 +111,8 @@ namespace BrokEQ
 
         public BotConfig bcConfig { get; set; }
 
+        public bool MonitorLogs { get; set; }
+
 
         private BackgroundWorker backgroundWorker1;
         private BackgroundWorker backgroundLogMonitor;
@@ -208,9 +210,12 @@ namespace BrokEQ
             switch (saAction[0])
             {
                 // CharmBreak TTS
-                case "charmbreaktts":
-                    var iMC = Client.GetChannel(837881126005506128) as IMessageChannel;
-                    await iMC.SendMessageAsync("Charm Break", true);
+                case "tts":
+                    var iMC = Client.GetChannel(836729920973176893) as IMessageChannel;
+                    StringBuilder sb = new StringBuilder();
+                    for (int x1 = 1; x1 < saAction.Length; x1++)
+                        sb.Append(saAction[x1] + " ");
+                    await iMC.SendMessageAsync(sb.ToString(), true);
                     break;
                 
                 // POC for Sending Audio to Discord
@@ -634,6 +639,8 @@ namespace BrokEQ
                 {
                     for (; ; )
                     {
+                        if (!MonitorLogs)
+                            break;
                         // Every half a second, re-read the log file
                         Thread.Sleep(TimeSpan.FromSeconds(.5));
 
@@ -778,7 +785,8 @@ namespace BrokEQ
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!backgroundLogMonitor.IsBusy)
+            MonitorLogs = true;
+            if (!backgroundLogMonitor.IsBusy)
                 backgroundLogMonitor.RunWorkerAsync();            
         }
 
@@ -1447,7 +1455,8 @@ namespace BrokEQ
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(backgroundLogMonitor.IsBusy)
+            MonitorLogs = false;
+            if (backgroundLogMonitor.IsBusy)
                 this.backgroundLogMonitor.CancelAsync();
         }
 
