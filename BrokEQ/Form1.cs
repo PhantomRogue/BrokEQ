@@ -107,6 +107,10 @@ namespace BrokEQ
         public int PixelCount { get; set; }
         public int iTextTriggerCount { get; set; }
 
+        public string sBotToken { get; set; }
+
+        public BotConfig bcConfig { get; set; }
+
 
         private BackgroundWorker backgroundWorker1;
         private BackgroundWorker backgroundLogMonitor;
@@ -126,11 +130,13 @@ namespace BrokEQ
             // Background Process to do the Pixel Monitor
             backgroundWorker1 = new BackgroundWorker();
             backgroundWorker1.DoWork += new DoWorkEventHandler(CheckPixels);
+            backgroundWorker1.WorkerSupportsCancellation = true;
 
 
             // Background Process to watch the Log File
             backgroundLogMonitor = new BackgroundWorker();
-            backgroundLogMonitor.DoWork += new DoWorkEventHandler(Follow);
+            backgroundLogMonitor.DoWork += new DoWorkEventHandler(MonitorLog);
+            backgroundLogMonitor.WorkerSupportsCancellation = true;
 
             // Trigger to watch Discord Messages
             Client.MessageReceived += ClientOnMessageReceived;
@@ -195,16 +201,19 @@ namespace BrokEQ
         private async Task Brain(string sTrigger)
         {
 
-            string[] saTriggers = sTrigger.Split(' ');
+            string[] saAction = sTrigger.Split(' ');
             List<Input> lInputs = new List<Input>();
             Input[] inputKeyboard = new Input[2];
 
-            switch (saTriggers[0])
+            switch (saAction[0])
             {
-                case "charmbreak":
+                // CharmBreak TTS
+                case "charmbreaktts":
                     var iMC = Client.GetChannel(837881126005506128) as IMessageChannel;
                     await iMC.SendMessageAsync("Charm Break", true);
                     break;
+                
+                // POC for Sending Audio to Discord
                 case "rafiki":
                     try
                     {
@@ -216,12 +225,15 @@ namespace BrokEQ
                         log.Info("Error: " + ex.Message + Environment.NewLine + ex.StackTrace);
                     }
                     break;
+                // Rebuffing Target
+                // rebuff <spellgem>
+                // Target gotten from the Trigger line, buffme.spell <target> saved into Variable, sRebuffTarget
                 case "rebuff":
                     try
                     {
                         focusEQ();
                         wait(250);
-                        // Rebuff, What we rebuffin (saTriggers[1] holds the spell)
+                        // Rebuff, What we rebuffin (saAction[1] holds the spell)
                         if (true)
                         {
                             if (sRebuffTarget.ToLower().Equals("you"))
@@ -316,7 +328,7 @@ namespace BrokEQ
                             wait(750);
 
                             //Input[] inputKeyboard = lInputs.ToArray();
-                            Input[] iKeyPresses = ParseAction("Alt+D" + saTriggers[1]);
+                            Input[] iKeyPresses = ParseAction("Alt+D" + saAction[1]);
 
                             SendInput((uint)iKeyPresses.Length, iKeyPresses, Marshal.SizeOf(typeof(Input)));
                         }
@@ -326,6 +338,7 @@ namespace BrokEQ
                         log.Info("Error: " + ex.Message + Environment.NewLine + ex.StackTrace);
                     }
                     break;
+                // Custom Recharm Function, on charm  break, if the action is recharm, the bot recharms the saved target (must be used in conjuction with the charmed trigger/action)
                 case "recharm":
                     try
                     {
@@ -429,6 +442,37 @@ namespace BrokEQ
 
 
                         }
+                    }
+                    catch(Exception ex)
+                    {
+                        log.Info("Error: " + ex.Message + Environment.NewLine + ex.StackTrace);
+                    }
+                    break;
+                // Ideas for more Actions:
+                // Keystrokes, just sending a keystroke/string of keys
+                // Trigger would be: keystroke: <X>
+                // Other possibilities
+                // Spellgem:  Just send a spellgem
+                case "keystroke":
+                    try
+                    {
+                        // First word in the Action 
+                        if(saAction[1].Contains(","))
+                        {
+                            Input[] inKey = new Input[1];
+                            // We have multiple keystrokes, lets send em
+                            foreach(string s in saAction[1].Split(','))
+                            {    
+                                inKey = ParseAction(s);
+                                SendInput((uint)inKey.Length, inKey, Marshal.SizeOf(typeof(Input)));
+                            }
+                        }
+                        else
+                        {
+                            // We have a single Keystroke, lets send it
+                            Input[] iRebuffKeys = ParseAction(saAction[1]);
+                        }
+                        
                     }
                     catch(Exception ex)
                     {
@@ -579,7 +623,7 @@ namespace BrokEQ
             }
         }
 
-        private void Follow(object sender, EventArgs e)
+        private void MonitorLog(object sender, EventArgs e)
         {            
             // Note the FileShare.ReadWrite, allowing others to modify the file
             using (FileStream fileStream = File.Open(sLogFile, FileMode.Open,
@@ -590,13 +634,13 @@ namespace BrokEQ
                 {
                     for (; ; )
                     {
-                        // Substitute a different timespan if required.
+                        // Every half a second, re-read the log file
                         Thread.Sleep(TimeSpan.FromSeconds(.5));
 
-                        // Write the output to the screen or do something different.
                         // If you want newlines, search the return value of "ReadToEnd"
                         // for Environment.NewLine.
 
+                        // Come up with a better way, we still get empty lines read, work around is checking if its null/empty and skipping, possible waste of cpu time
                         string[] sLogLines = streamReader.ReadToEnd().Trim().Split(Environment.NewLine.ToCharArray());
                         foreach (string str in sLogLines)
                         {
@@ -734,7 +778,8 @@ namespace BrokEQ
 
         private void button1_Click(object sender, EventArgs e)
         {
-            backgroundLogMonitor.RunWorkerAsync();            
+            if(!backgroundLogMonitor.IsBusy)
+                backgroundLogMonitor.RunWorkerAsync();            
         }
 
         private async void button3_Click(object sender, EventArgs e)
@@ -1388,6 +1433,28 @@ namespace BrokEQ
                 txtWriter.WriteLine(this.tbDiscordChannel.Text);
                 txtWriter.WriteLine(this.tbEQGameFolder.Text);
             }
+
+            /*
+             * Trying to use a Single Config File
+             *  
+            this.bcConfig.AuthorizedUsers = this.tbPrioList.Text.Replace(Environment.NewLine, "|");
+            this.bcConfig.DiscordListenerChannel = this.tbDiscordChannel.Text;
+            this.bcConfig.DiscordAudioChannel = this.tbDiscordAudioChannel.Text;
+            this.bcConfig.EQLogDirectory = this.tbEQGameFolder.Text;
+            this.bcConfig.Triggers = sTriggerGroup;
+            */
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if(backgroundLogMonitor.IsBusy)
+                this.backgroundLogMonitor.CancelAsync();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if(backgroundWorker1.IsBusy)
+                this.backgroundWorker1.CancelAsync();
         }
     }
 }

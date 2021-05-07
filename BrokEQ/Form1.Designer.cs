@@ -105,6 +105,10 @@ namespace BrokEQ
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbEQGameFolder = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbDiscordAudioChannel = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.TextTriggers.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -339,6 +343,7 @@ namespace BrokEQ
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.Action1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Trigger1);
@@ -377,6 +382,7 @@ namespace BrokEQ
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.PixelAction9);
             this.tabPage2.Controls.Add(this.PixelLocation9);
@@ -697,6 +703,8 @@ namespace BrokEQ
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.tbDiscordAudioChannel);
             this.tabPage3.Controls.Add(this.tbEQGameFolder);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.label12);
@@ -796,14 +804,14 @@ namespace BrokEQ
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(26, 327);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 20);
+            this.label11.Size = new System.Drawing.Size(218, 20);
             this.label11.TabIndex = 8;
-            this.label11.Text = "Discord Channel ID";
+            this.label11.Text = "Discord Channel ID (Listener)";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(26, 404);
+            this.label12.Location = new System.Drawing.Point(351, 392);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(206, 20);
             this.label12.TabIndex = 10;
@@ -811,7 +819,7 @@ namespace BrokEQ
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(30, 427);
+            this.textBox1.Location = new System.Drawing.Point(355, 415);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(231, 26);
             this.textBox1.TabIndex = 9;
@@ -819,7 +827,7 @@ namespace BrokEQ
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(30, 484);
+            this.label13.Location = new System.Drawing.Point(351, 327);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(141, 20);
             this.label13.TabIndex = 11;
@@ -827,10 +835,46 @@ namespace BrokEQ
             // 
             // tbEQGameFolder
             // 
-            this.tbEQGameFolder.Location = new System.Drawing.Point(30, 507);
+            this.tbEQGameFolder.Location = new System.Drawing.Point(355, 350);
             this.tbEQGameFolder.Name = "tbEQGameFolder";
             this.tbEQGameFolder.Size = new System.Drawing.Size(231, 26);
             this.tbEQGameFolder.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 392);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Discord Audio Channel";
+            // 
+            // tbDiscordAudioChannel
+            // 
+            this.tbDiscordAudioChannel.Location = new System.Drawing.Point(30, 415);
+            this.tbDiscordAudioChannel.Name = "tbDiscordAudioChannel";
+            this.tbDiscordAudioChannel.Size = new System.Drawing.Size(231, 26);
+            this.tbDiscordAudioChannel.TabIndex = 13;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(144, 465);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 35);
+            this.button6.TabIndex = 29;
+            this.button6.Text = "Stop Monitor";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(397, 9);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(129, 35);
+            this.button7.TabIndex = 63;
+            this.button7.Text = "Stop PixelScan";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
             // 
@@ -933,6 +977,10 @@ namespace BrokEQ
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbEQGameFolder;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbDiscordAudioChannel;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 
