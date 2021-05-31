@@ -25,7 +25,7 @@ using static BrokEQ.KeySetup;
 
 namespace BrokEQ
 {
-    public partial class Form1 : Form
+    public partial class BrokEQ : Form
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -127,7 +127,7 @@ namespace BrokEQ
             return bmp.GetPixel(0, 0);
         }
 
-        public Form1()
+        public BrokEQ()
         {
             // Background Process to do the Pixel Monitor
             backgroundWorker1 = new BackgroundWorker();
@@ -211,7 +211,7 @@ namespace BrokEQ
             {
                 // CharmBreak TTS
                 case "tts":
-                    var iMC = Client.GetChannel(836729920973176893) as IMessageChannel;
+                    var iMC = Client.GetChannel(837075311036334082) as IMessageChannel;
                     StringBuilder sb = new StringBuilder();
                     for (int x1 = 1; x1 < saAction.Length; x1++)
                         sb.Append(saAction[x1] + " ");
@@ -476,6 +476,7 @@ namespace BrokEQ
                         {
                             // We have a single Keystroke, lets send it
                             Input[] iRebuffKeys = ParseAction(saAction[1]);
+                            SendInput((uint)iRebuffKeys.Length, iRebuffKeys, Marshal.SizeOf(typeof(Input)));
                         }
                         
                     }
@@ -672,17 +673,17 @@ namespace BrokEQ
 
                                     }
                                     // Rebuff handled via Discord
-                                    //else if(tbTmpA.Text.ToLower().Contains("rebuff"))
-                                    //{
-                                    //    // Use Regex to Get the Requestor
-                                    //    // [Mon May 03 10:16:27 2021] You tell your party, 'buffme.clarity'
-                                    //    // \w+(?=\s+(tell|tells) your party)
-                                    //    Regex rTargetReg = new(@"\w+(?=\s+(tell|tells) your party)");
-                                    //    Match mTarget = rTargetReg.Match(str);
-                                    //    this.sRebuffTarget = mTarget.Value;
+                                    else if (tbTmpA.Text.ToLower().Contains("rebuff"))
+                                    {
+                                        // Use Regex to Get the Requestor
+                                        // [Mon May 03 10:16:27 2021] You tell your party, 'buffme.clarity'
+                                        // \w+(?=\s+(tell|tells) your party)
+                                        Regex rTargetReg = new(@"\w+(?=\s+(tell|tells) (your party|you))");
+                                        Match mTarget = rTargetReg.Match(str);
+                                        this.sRebuffTarget = mTarget.Value;
 
 
-                                    //}
+                                    }
                                     Task tBrain = Brain(tbTmpA.Text.ToLower());
                                 }
                             }
@@ -903,7 +904,7 @@ namespace BrokEQ
                     }
                     if (GetAsyncKeyState(Keys.C) != 0)
                     {
-                        break;
+                        this.TestPixels();
                     }
 
                 }
@@ -1238,7 +1239,34 @@ namespace BrokEQ
                 };
         }
 
-        private void CheckPixels(object sender, EventArgs e)
+        private void TestPixels()
+        {
+
+            // Loop through the Pixels
+            for (int x = 1; x <= PixelCount; x++)
+            {
+                TextBox tbTmpPC = this.Controls.Find("PixelColor" + x.ToString(), true).First() as TextBox;
+                TextBox tbTmpPL = this.Controls.Find("PixelLocation" + x.ToString(), true).First() as TextBox;
+                TextBox tbTmpPA = this.Controls.Find("PixelAction" + x.ToString(), true).First() as TextBox;
+
+                // If no Action, skip checking it
+                if (tbTmpPA.Text == string.Empty)
+                    break;
+
+                string[] sPixel = tbTmpPL.Text.Split(',');
+
+                System.Drawing.Color cPixelColor = GetColorAt((int)(int.Parse(sPixel[0]) * 1.5), (int)(int.Parse(sPixel[1]) * 1.5));
+
+                    Cursor.Position = new Point((int)(int.Parse(sPixel[0])), (int)(int.Parse(sPixel[1])));
+                    wait(500);
+                    Input[] iMouseClick = DoMouseClick(1);
+                    wait(500);
+                }
+
+            }
+
+
+            private void CheckPixels(object sender, EventArgs e)
         {
             focusEQ();
             wait(300);

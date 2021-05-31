@@ -47,3 +47,150 @@
    at System.IO.FileInfo.Open(FileMode mode)
    at BrokEQ.Form1.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
    at BrokEQ.Form1.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-07 20:41:32,900 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-07 20:42:08,023 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-07 20:43:35,692 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-08 08:56:12,438 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:17:23,100 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:21:15,755 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:21:55,888 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:24:57,728 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:25:45,853 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:28:21,356 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:30:11,650 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:31:20,562 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:32:49,379 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:44:15,652 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-29 23:46:35,850 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 555
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-30 00:02:26,989 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 556
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-30 12:41:44,129 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 556
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-31 15:54:05,387 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 556
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-31 16:09:11,922 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 556
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-31 16:35:15,728 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 556
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182
+2021-05-31 16:36:39,059 INFO BrokEQ.BrokEQ - Could not find file 'C:\Bot.ini'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at System.IO.FileInfo.Open(FileMode mode)
+   at BrokEQ.BrokEQ.loadDataAsync(String sLoc) in C:\BrokEQ\BrokEQ\Form1.cs:line 556
+   at BrokEQ.BrokEQ.ReloadSettings() in C:\BrokEQ\BrokEQ\Form1.cs:line 182

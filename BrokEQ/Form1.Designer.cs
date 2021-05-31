@@ -2,7 +2,7 @@
 
 namespace BrokEQ
 {
-    partial class Form1
+    partial class BrokEQ
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,9 @@ namespace BrokEQ
             this.label4 = new System.Windows.Forms.Label();
             this.TextTriggers = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.PixelAction9 = new System.Windows.Forms.TextBox();
             this.PixelLocation9 = new System.Windows.Forms.TextBox();
@@ -92,6 +94,14 @@ namespace BrokEQ
             this.PixelColor1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbDiscordAudioChannel = new System.Windows.Forms.TextBox();
+            this.tbEQGameFolder = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbDiscordChannel = new System.Windows.Forms.TextBox();
             this.tbHasteSpell = new System.Windows.Forms.TextBox();
             this.tbClaritySpell = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -99,16 +109,8 @@ namespace BrokEQ
             this.btnSaveConfig = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tbPrioList = new System.Windows.Forms.TextBox();
-            this.tbDiscordChannel = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tbEQGameFolder = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbDiscordAudioChannel = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.TextTriggers.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -378,6 +380,16 @@ namespace BrokEQ
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Text Triggers";
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(144, 465);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 35);
+            this.button6.TabIndex = 29;
+            this.button6.Text = "Stop Monitor";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
@@ -422,6 +434,16 @@ namespace BrokEQ
             this.tabPage2.Size = new System.Drawing.Size(732, 696);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Pixel Triggers";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(397, 9);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(129, 35);
+            this.button7.TabIndex = 63;
+            this.button7.Text = "Stop PixelScan";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
             // 
@@ -703,6 +725,8 @@ namespace BrokEQ
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.textBox2);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.tbDiscordAudioChannel);
             this.tabPage3.Controls.Add(this.tbEQGameFolder);
@@ -725,6 +749,70 @@ namespace BrokEQ
             this.tabPage3.Size = new System.Drawing.Size(732, 696);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Config";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 456);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(171, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Discord Audio Channel";
+            // 
+            // tbDiscordAudioChannel
+            // 
+            this.tbDiscordAudioChannel.Location = new System.Drawing.Point(30, 479);
+            this.tbDiscordAudioChannel.Name = "tbDiscordAudioChannel";
+            this.tbDiscordAudioChannel.Size = new System.Drawing.Size(231, 26);
+            this.tbDiscordAudioChannel.TabIndex = 13;
+            // 
+            // tbEQGameFolder
+            // 
+            this.tbEQGameFolder.Location = new System.Drawing.Point(355, 350);
+            this.tbEQGameFolder.Name = "tbEQGameFolder";
+            this.tbEQGameFolder.Size = new System.Drawing.Size(231, 26);
+            this.tbEQGameFolder.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(351, 327);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(141, 20);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "EQGame Location";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(351, 392);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(206, 20);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Bot Token (if using own bot)";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(355, 415);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(231, 26);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(26, 327);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(195, 20);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Discord Listener Channels";
+            // 
+            // tbDiscordChannel
+            // 
+            this.tbDiscordChannel.Location = new System.Drawing.Point(30, 350);
+            this.tbDiscordChannel.Name = "tbDiscordChannel";
+            this.tbDiscordChannel.Size = new System.Drawing.Size(231, 26);
+            this.tbDiscordChannel.TabIndex = 7;
             // 
             // tbHasteSpell
             // 
@@ -792,99 +880,31 @@ namespace BrokEQ
             this.tbPrioList.Size = new System.Drawing.Size(231, 255);
             this.tbPrioList.TabIndex = 0;
             // 
-            // tbDiscordChannel
+            // label14
             // 
-            this.tbDiscordChannel.Location = new System.Drawing.Point(30, 350);
-            this.tbDiscordChannel.Name = "tbDiscordChannel";
-            this.tbDiscordChannel.Size = new System.Drawing.Size(231, 26);
-            this.tbDiscordChannel.TabIndex = 7;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(26, 392);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(159, 20);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Discord TTS Channel";
             // 
-            // label11
+            // textBox2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(26, 327);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(218, 20);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Discord Channel ID (Listener)";
+            this.textBox2.Location = new System.Drawing.Point(30, 415);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(231, 26);
+            this.textBox2.TabIndex = 15;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(351, 392);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(206, 20);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "Bot Token (if using own bot)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(355, 415);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 26);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(351, 327);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(141, 20);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "EQGame Location";
-            // 
-            // tbEQGameFolder
-            // 
-            this.tbEQGameFolder.Location = new System.Drawing.Point(355, 350);
-            this.tbEQGameFolder.Name = "tbEQGameFolder";
-            this.tbEQGameFolder.Size = new System.Drawing.Size(231, 26);
-            this.tbEQGameFolder.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 392);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(171, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Discord Audio Channel";
-            // 
-            // tbDiscordAudioChannel
-            // 
-            this.tbDiscordAudioChannel.Location = new System.Drawing.Point(30, 415);
-            this.tbDiscordAudioChannel.Name = "tbDiscordAudioChannel";
-            this.tbDiscordAudioChannel.Size = new System.Drawing.Size(231, 26);
-            this.tbDiscordAudioChannel.TabIndex = 13;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(144, 465);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 35);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Stop Monitor";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(397, 9);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(129, 35);
-            this.button7.TabIndex = 63;
-            this.button7.Text = "Stop PixelScan";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // Form1
+            // BrokEQ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(776, 802);
             this.Controls.Add(this.TextTriggers);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "BrokEQ";
+            this.Text = "BrokEQ";
             this.TextTriggers.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -981,6 +1001,8 @@ namespace BrokEQ
         private System.Windows.Forms.TextBox tbDiscordAudioChannel;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
